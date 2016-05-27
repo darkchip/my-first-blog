@@ -1,0 +1,77 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+{% endblock %}
+
+
+{% block content %}
+{% for post in posts %}
+        <div class="post">
+            <h1><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h1>
+            <br>
+            {% if post.picture_URL %}
+            <img src="{{ post.picture_URL }}" />
+            {% endif %}
+            <br>
+            {{ post.text|linebreaks }}
+            <br>
+            <br>
+            <h3>By <a href="{% url 'user_post_list' pk=post.author.pk %}">{{ post.author }}</a></h3>
+            <div class="date">
+                {{ post.published_date }}
+            </div>
+        </div>
+{% endfor %}
+
+
+</header>
+</section>
+
+				<section class="box special">
+					<header class="major">
+							
+							
+					
+                
+							
+							
+						</header>
+</section>
+
+
+
+		
+		<div class="row">
+						<div class="6u 12u(narrower)">
+							<section class="box special">
+								
+								<h3>Hipster</h3>
+								<p>Tech</p>
+								<ul class="actions">
+									<li><a href="about.html" class="button alt">Go</a></li>
+								</ul>
+							</section>
+						</div>
+						<div class="6u 12u(narrower)">
+							<section class="box special">
+								
+								<h3>High-End</h3>
+								<p>Calendar</p>
+								<ul class="actions">
+									<li><a href="about.html" class="button alt">Go</a></li>
+								</ul>
+							</section>
+						</div>
+					</div>
+				</section>
+				<footer id="footer">
+					<ul class="copyright">
+						<li>The Stratton</li>
+						{% if user.is_authenticated %}
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+{% endif %}
+					</ul>
+				</footer>
+        
+
+
+{% endblock %}
