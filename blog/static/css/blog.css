@@ -2,13 +2,13 @@
 @import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,300italic,400italic");
 
 .page-header {
-    background-color: #ff9400;
+    background-color: #fff;
     margin-top: 0;
     padding: 20px 20px 20px 40px;
 }
 
 .page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
-    color: #ffffff;
+    color: #666666;
     font-size: 36pt;
     text-decoration: none;
 }
@@ -23,6 +23,7 @@ h1, h2, h3, h4 {
 	font-variant: normal;
 	font-weight: 500;
 	line-height: 26px;
+	color: #fff;
 }
 
 h2 {
@@ -43,10 +44,11 @@ h2 {
 }
 
 .top-menu, .top-menu:hover, .top-menu:visited {
-    color: #ffffff;
+    color: #666666;
     float: right;
     font-size: 26pt;
     margin-right: 20px;
+    text-decoration: none;
 }
 
 .post {
@@ -110,7 +112,7 @@ html, body, div, span, applet, object, iframe, h1, h3, h4, h5, h6, p, blockquote
 		font-size: 100%;
 		vertical-align: baseline;
 		text-decoration: none;
-		color: #fff;
+		color: #666666;
 	}
 	
 
@@ -3088,8 +3090,9 @@ html, body, div, span, applet, object, iframe, h1, h3, h4, h5, h6, p, blockquote
 		background-repeat: repeat,							no-repeat;
 		background-size: auto,							cover;
 		color: #fff;
-		padding: 5em 0 5em 0;
+		padding: 3em 0 3em 0;
 		text-align: center;
+		text-decoration: none;
 	}
 
 		#banner :last-child {
@@ -3105,6 +3108,7 @@ html, body, div, span, applet, object, iframe, h1, h3, h4, h5, h6, p, blockquote
 			line-height: 1em;
 			margin: 0 0 0.5em 0;
 			padding: 0;
+			text-decoration: none;
 		}
 
 		#banner p {
@@ -3127,6 +3131,7 @@ html, body, div, span, applet, object, iframe, h1, h3, h4, h5, h6, p, blockquote
 			#banner input[type="button"]:hover,
 			#banner .button:hover {
 				background-color: rgba(255, 255, 255, 0.1);
+				text-decoration: none;
 			}
 
 			#banner input[type="submit"]:active,
@@ -3796,7 +3801,7 @@ html, body, div, span, applet, object, iframe, h1, h3, h4, h5, h6, p, blockquote
 		/* Banner */
 
 			#banner {
-				padding: 5em 1em 4em 1em;
+				padding: 4em 1em 4em 1em;
 			}
 
 		/* Main */

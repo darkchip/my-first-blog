@@ -1,13 +1,40 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
-    <h1>Edit</h1>
-    <br>
-    <form method="POST" class="post-form">{% csrf_token %}
-    <br>
-        {{ form.as_p }}
-        <br>
-        <br>
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
+
+				<section id="main" class="container 75%">
+					<header>
+						<h2>Post</h2>
+						<p>Add or edit previous posts</p>
+					</header>
+					<div class="box">
+						<form method="POST" class="post-form">{% csrf_token %}
+							<div class="row uniform 50%">
+								<div class="12u">
+									{{ form.as_p }}
+								</div>
+							</div>
+							
+							<div class="row uniform">
+								<div class="12u">
+									<ul class="actions align-center">
+										<li><input type="submit" value="Post"/></li>
+									</ul>
+								</div>
+							</div>
+						</form>
+					</div>
+				</section>
+
+
+
+
+
+
+
+
+
+    
+    
+   
 {% endblock %}

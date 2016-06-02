@@ -1,6 +1,9 @@
 {% extends 'blog/base.html' %}
 
 {% block content %}
+<section id="main" class="container">
+	<section class="box special">
+		<header class="major">
     <div class="post">
         <h1>{{ post.title }}</h1>
         {% if post.picture_URL %}
@@ -16,16 +19,17 @@
         	{{ post.published_date }}
         </div>
     	{% endif %}
-    	
+    	<br>
     	<div align="right">
        	{% if user.is_authenticated %}
-    		<a class="btn btn-default" href="{% url 'post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
+    		<a class="button" href="{% url 'post_edit' pk=post.pk %}">Edit</a>
         {% endif %}
         </div>
-      	
-        
       
       </div>
+      </header>
+</section>
+
 {% endblock %}
 
 
