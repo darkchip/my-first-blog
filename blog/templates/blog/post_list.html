@@ -13,7 +13,9 @@
             <img src="{{ post.picture_URL }}" />
             {% endif %}
             <br>
+            <div align="justify" class="12u">
             {{ post.text|linebreaks }}
+            </div>
             <br>
             <br>
             <!--<h3>By <a href="{% url 'user_post_list' pk=post.author.pk %}">{{ post.author }}</a></h3>-->
@@ -72,8 +74,8 @@
 						<li>The Stratton</li>
 						
 						{% if user.is_authenticated %}
-    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-{% endif %}
+    						<a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+						{% endif %}
 					</ul>
 				</footer>
         
