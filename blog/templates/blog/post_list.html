@@ -20,10 +20,12 @@
             <br>
             <!--<h3>By <a href="{% url 'user_post_list' pk=post.author.pk %}">{{ post.author }}</a></h3>-->
             <div class="date">
-                {{ post.published_date }}
+            	{{ post.published_date }}
+            	{{ post.date }}
             </div>
         </div>
 {% endfor %}
+
 </header>
 </section>
 <section class="box special">
